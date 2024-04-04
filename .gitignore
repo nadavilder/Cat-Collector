@@ -1,0 +1,13 @@
+# General
+.DS_Store
+.env
+
+# Frontend specific
+/frontend/node_modules/
+/frontend/build/
+/frontend/.cache/
+/frontend/dist/
+
+# Backend specific
+/backend/config.py
+
