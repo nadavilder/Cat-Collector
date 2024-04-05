@@ -30,10 +30,24 @@ Backend Setup:
     Getting Started:
     1. Navigate to the backend directory:
         cd .\backend\
-    2. Install the required Python packages by running:
+    2. Create config.py file in the backend folder and Configure the connection parameters:
+
+        class Config:
+        SQLALCHEMY_DATABASE_URI = 'postgresql://usename:password@localhost/cat_collector'
+        SQLALCHEMY_TRACK_MODIFICATIONS = False
+        THECATAPI_KEY = 'your API KEY'
+
+        comment (do not copy):
+            postgresql://: The prefix indicating the database system being used (PostgreSQL in this case).
+            username: The username you use to access the PostgreSQL database.
+            password: The password for the given username.
+
+    3. set you API key after register for an API key with TheCatAPI in THECATAPI_KEY.
+    4. Install the required Python packages by running:
         pip install -r requirements.txt
-    3. Start the Flask server:
+    5. Start the Flask server:
         flask run
+    
 
 
 
@@ -41,17 +55,6 @@ Backend Setup:
 Setting Up PostgreSQL:
 1. Install PostgreSQL and create a database named 'cat_collector':
     CREATE DATABASE cat_collector;
-2. Create config.py file in the backend folder and Configure the connection parameters:
-
-    class Config:
-    SQLALCHEMY_DATABASE_URI = 'postgresql://usename:password@localhost/cat_collector'
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
-    THECATAPI_KEY = 'live_enfGx4jJJEDERijBcyEQt8HjGtypv2PilEgLWfi16jOAlBihDCg4w4oP8eNWcQHS'
-
-    comment (do not copy):
-        postgresql://: The prefix indicating the database system being used (PostgreSQL in this case).
-        username: The username you use to access the PostgreSQL database.
-        password: The password for the given username.
 
 
 
